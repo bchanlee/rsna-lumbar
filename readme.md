@@ -12,9 +12,27 @@ classification of spinal canal stenosis severity (normal_mild, moderate, severe)
 > cfg0_gt_spinal_crops.py
 
 
+> etl/000d_use_models_to_generate_crops.py
+
+
 
 ## ~data
 spinal stenosis sagittal T2 5000 dicom images, 300 pts
+
+## performance
+cfg_spinal_cls
+fold best_val_metric
+0	0.2523
+1	0.3081
+2	0.285
+3	0.2897
+4	0.2345
+CV 0.27392
+but lots of misses too e.g. fold 0
+Normal / Mild: 260
+Moderate: 15
+Severe: 11
+True: 263 False: 23
 
 # TODO
 [x] get general overview which files to use
