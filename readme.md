@@ -1,15 +1,5 @@
 # Overview
-Targets
-Foraminal narrowing (on either the left or right foramen at a specified level).
-Subarticular stenosis (on either the left or right side at a specified level).
-Canal stenosis (only at a specified level).
-
-Just do Canal stenosis grading (from crops given ground truth coordinates), Sagittal T2 / STIR slices, fewer 
-	full dataset: 1975 sagittal T2 series (assuming all unique, and 1-to-1 with study id)
-	test dataset: no coordinates given so need localisation step (different model e.g. CNN-transformer)
-
-`data`
-spinal stenosis sagittal T2 5000 dicom images, 300 pts
+Mini project on spinal Canal Stenosis diagnosis from MRI images - using 300 pts, 5000 dicom images
 
 ## Performance
 ### cls: spinal stenosis grading (normal/mild, mod, severe)
