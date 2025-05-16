@@ -5,14 +5,15 @@ from .base import Config
 
 
 cfg = Config()
-cfg.neptune_mode = "async"
+# cfg.neptune_mode = "async"
+cfg.neptune_model = "offline"
 
 cfg.save_dir = "experiments/"
-cfg.project = "gradientecho/rsna-lspine"
+cfg.project = "bchanlee/rsna-lumbar" # for neptune - need API token
 
-cfg.task = "classification" # TODO
+cfg.task = "classification"
 
-cfg.model = "net_2d" # TODO
+cfg.model = "net_2d"
 cfg.backbone = "tf_efficientnetv2_s"
 cfg.pretrained = True
 cfg.num_input_channels = 3
@@ -26,13 +27,13 @@ cfg.normalization = "-1_1"
 cfg.normalization_params = {"min": 0, "max": 255}
 
 cfg.fold = 0 
-cfg.dataset = "simple_2d_sample_weights" # TODO
-cfg.data_dir = "../data/train_crops_gt_coords/spinal/"
-cfg.annotations_file = "../data/train_gt_spinal_crops_kfold.csv"
+cfg.dataset = "simple_2d_sample_weights"
+cfg.data_dir = "data/train_crops_gt_coords/spinal/"
+cfg.annotations_file = "data/train_gt_spinal_crops_kfold.csv"
 cfg.inputs = "filepath"
 cfg.targets = ["normal_mild", "moderate", "severe"]
 cfg.cv2_load_flag = cv2.IMREAD_COLOR
-cfg.num_workers = 14
+cfg.num_workers = 0 # changed
 cfg.pin_memory = True
 cfg.channel_reverse = True
 # cfg.sampler = "IterationBasedSampler"
