@@ -1,5 +1,5 @@
 # Overview
-Mini project on spinal Canal Stenosis diagnosis from MRI images - using 300 pts, 5000 dicom images
+Mini project on Spinal Canal Stenosis diagnosis from MRI images - using 300 pts, 5000 dicom images
 
 ## Performance
 ### cls: spinal stenosis grading (normal/mild, mod, severe)
