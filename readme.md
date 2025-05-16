@@ -13,6 +13,8 @@ spinal stenosis sagittal T2 5000 dicom images, 300 pts
 
 ## Performance
 ### cls: spinal stenosis grading (normal/mild, mod, severe)
+CV 0.2740
+
 | Fold | Best Validation Metric |
 |------|------------------------|
 | 0    | 0.2523                 |
@@ -20,8 +22,7 @@ spinal stenosis sagittal T2 5000 dicom images, 300 pts
 | 2    | 0.2850                 |
 | 3    | 0.2897                 |
 | 4    | 0.2345                 |
-|------|------------------------|
-| CV   | 0.2740                 |
+
 
 
 Fold 0
@@ -31,6 +32,8 @@ Fold 0
 - True Total: 263/286
 
 ### regression: spinal stenosis coordinates (l1 to s1, x, y)
+CV 0.054
+
 | Fold | Best Validation Metric |
 |------|------------------------|
 | 0    | 0.0521                 |
@@ -38,8 +41,6 @@ Fold 0
 | 2    | 0.0487                 |
 | 3    | not done               |
 | 4    | not done               |
-|------|------------------------|
-| CV   | 0.054                  |
 
 
 # TODO
