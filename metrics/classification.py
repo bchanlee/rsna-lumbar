@@ -55,3 +55,19 @@ class AUROC(_ScoreBased):
     name = "auc"
     def metric_func(self, t, p): 
         return _roc_auc_score(t, p)
+    
+class MAE(_BaseMetric):
+
+    def compute(self):
+        p = torch.cat(self.p, dim=0).cpu().numpy()
+        t = torch.cat(self.t, dim=0).cpu().numpy()
+        m = np.mean(np.abs(p - t))
+        return {"mae": torch.tensor(m)}
+    
+class MAESigmoid(_BaseMetric):
+
+    def compute(self):
+        p = torch.cat(self.p, dim=0).sigmoid().cpu().numpy()
+        t = torch.cat(self.t, dim=0).cpu().numpy()
+        m = np.mean(np.abs(p - t))
+        return {"mae": torch.tensor(m)}

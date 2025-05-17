@@ -34,7 +34,7 @@ for row in tqdm(coords_df.itertuples(), total=len(coords_df)):
 	this_instance = row.instance_number
 	ch2 = this_instance - 1
 	ch1 = max(0, ch2 - 1)
-	ch3 = ch2 + 1
+	ch3 = ch2 + 1 # assume not out of bounds
 	instances_3ch = [ch1, ch2, ch3]
 	images = np.stack([
 		cv2.imread(os.path.join(image_dir, str(row.study_id), str(row.series_id), f"IM{_:06d}.png"), 0)

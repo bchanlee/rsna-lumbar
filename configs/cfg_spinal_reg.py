@@ -42,7 +42,7 @@ cfg.loss = "L1Loss"
 cfg.loss_params = {}
 
 cfg.batch_size = 1
-cfg.num_epochs = 5
+cfg.num_epochs = 20
 cfg.optimizer = "AdamW"
 cfg.optimizer_params = {"lr": 3e-4}
 
@@ -51,13 +51,13 @@ cfg.scheduler_params = {"eta_min": 0}
 cfg.scheduler_interval = "step"
 
 cfg.val_batch_size = cfg.batch_size * 2
-cfg.metrics = ["Dummy"]
-cfg.val_metric = "loss"
+cfg.metrics = ["MAESigmoid"]
+cfg.val_metric = "mae"
 cfg.val_track = "min"
 
 # Avoid changing image dimensions via command line args
 # if using these vars later (e.g., in crop transforms)
-cfg.image_height = 512 # 512
+cfg.image_height = 512
 cfg.image_width = 512
 
 cfg.train_transforms = A.Compose([
