@@ -3,10 +3,10 @@ Mini project on Spinal Canal Stenosis diagnosis from MRI images (n=300 pts, 5000
 
 Assume sagittal T2 images with slice number given for good stenosis grading
 
-Steps
+Steps:
 1. Keypoint localisation of spinal stenosis for each level in lumbar spine
 	- targets: x, y coordinates for L1-S1
-2. Classifcation of stenosis grading based on crops from keypoint localisation
+2. Classification of stenosis grading based on crops from keypoint localisation
 	- targets: normal/mild, moderate, severe
 	- model is trained on crops from ground truth coordinates
 	
@@ -19,6 +19,7 @@ Steps
 | 0    | 0.0395                 |
 
 ### Step 2
+#### 5-fold
 CV 0.2740
 
 | Fold | Best Validation SampleWeightedLogLoss |
@@ -30,7 +31,8 @@ CV 0.2740
 | 4    | 0.2345                 |
 
 
-Fold 0
+#### Fold 0
+
 Using ground truth crops
 - True Normal/Mild: 255 / 260
 - True Moderate: 0 / 15
