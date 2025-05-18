@@ -55,13 +55,15 @@ Using generated crops
 - [x] regression
 - [x] inference to generate coordinates by scaling to original image then cropping (etl/000d_use_models_to_generate_crops.py)
 
+- [ ] train full sagittal T2 dataset on kaggle GPU
 - [ ] slice localisation (can just use half) - assume slice given
 - [ ] update conda/pip environment list
 - [ ] cnn-transformer for localisation
 - [ ] think about using augs (train_generated_crops_with_augs_dist_coord_proba)
+	- 0007_generated_crops_and_augs_using_gt_coordinates.py
 - [ ] think about using wandb instead of neptune logger - disabled for now
 - [ ] double CV? why need inner folds (hyperparam tuning but where in the code)
-	
+- [ ] metric for cls? auroc vs competitionmetric
 	
 # Past Issues
 - downloading from kaggle output doesnt download all but using kaggle competitions downloads all
