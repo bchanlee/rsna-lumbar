@@ -54,8 +54,9 @@ Using generated crops
 - [x] look at output from best checkpoints
 - [x] regression
 - [x] inference to generate coordinates by scaling to original image then cropping (etl/000d_use_models_to_generate_crops.py)
+- [x] how to use folds: combine predictions (not trained on whole dataset)
 
-- [ ] train full sagittal T2 dataset on kaggle GPU
+- [ ] train full sagittal T2 dataset on kaggle GPU (use !python in notebook, import sys github, and use .cuda in code)
 - [ ] slice localisation (can just use half) - assume slice given
 - [ ] update conda/pip environment list
 - [ ] cnn-transformer for localisation
@@ -64,6 +65,7 @@ Using generated crops
 - [ ] think about using wandb instead of neptune logger - disabled for now
 - [ ] double CV? why need inner folds (hyperparam tuning but where in the code)
 - [ ] metric for cls? auroc vs competitionmetric
+- [ ] inference pipeline
 	
 # Past Issues
 - downloading from kaggle output doesnt download all but using kaggle competitions downloads all
